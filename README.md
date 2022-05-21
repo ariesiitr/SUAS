@@ -44,5 +44,7 @@ The  shortest  path  for  Unmanned  Aerıal  Vehicles  (UAVs)  is calculated  wi
 A* algorithm is  a  heuristics  approach algorithm.  The total cost is calculated by adding heuristics cost to the cost of the road. The  lowest  total cost way  is  preferred. So  you don't need to visit all nodes.
 ![Screenshot 2022-05-22 040726](https://user-images.githubusercontent.com/77221967/169671133-fe776632-09b3-4045-b865-208813354c82.png)
 The function used by A* in distance calculation is as follows:  f(n) = g(n) + h(n)  (1) As it appears in the Equation 1, f (n): a heuristic function that calculates, g(n): the cost of access from the start node to the current node, h(n): the distance from the current node to the destination node is the estimated distance. 
-Reference - http://users.isr.ist.utl.pt/~mir/pub/ObstacleAvoidance.pdf
+
+## Reference
+Obstace Avoidance - http://users.isr.ist.utl.pt/~mir/pub/ObstacleAvoidance.pdf
 
