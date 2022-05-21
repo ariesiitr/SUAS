@@ -4,7 +4,7 @@ foster interest in Unmanned Aerial Systems (UAS),
 stimulate interest in UAS technologies and careers, 
 and to engage students in a challenging mission.
 
-#About the Competition
+## About the Competition
 The competition requires students to design, integrate, report on, and demonstrate a UAS capable of autonomous flight and navigation, remote sensing via onboard payload sensors, and execution of a specific set of tasks. The competition has been held annually since 2002.
 
 PATUXENT RIVER NAVAL AIR STATION (NAS):
@@ -40,7 +40,7 @@ An optimization of objective track could effectively jump from a local minimum t
 ## Path Planning
 The  shortest  path  for  Unmanned  Aerıal  Vehicles  (UAVs)  is calculated  with  two  -dimensional  (2D)  path  planning  algorithms  in  the environment including obstacles and thus the robots could perform their tasks as  soon  as  possible  in  the  environment.  The  aim is to avoid obstacles  and  to  find  the  shortest  way  to  the  target  point.
 
-# A* Algorithm
+### A* Algorithm
 A* algorithm is  a  heuristics  approach algorithm.  The total cost is calculated by adding heuristics cost to the cost of the road. The  lowest  total cost way  is  preferred. So  you don't need to visit all nodes.
 ![Screenshot 2022-05-22 040726](https://user-images.githubusercontent.com/77221967/169671133-fe776632-09b3-4045-b865-208813354c82.png)
 The function used by A* in distance calculation is as follows:  f(n) = g(n) + h(n)  (1) As it appears in the Equation 1, f (n): a heuristic function that calculates, g(n): the cost of access from the start node to the current node, h(n): the distance from the current node to the destination node is the estimated distance. 
