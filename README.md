@@ -34,4 +34,6 @@ Air Delivery - The UAS autonomously drops a payload object so that it lands unda
 
 ##Obstacle Avoidance
 An optimization of objective track could effectively jump from a local minimum to reach target under a dynamic environment with moving target and obstacles. As shown in Fig. 2, in the proposed APF model, moving obstacles will produce a repulsion for a UAV motion, while a target location will put a gravity on the UAV motion. Both forces on the UAV will collaboratively determine the acceleration of its motion, thus control the direction towards next-step position. When the UAV falls into the local minimum, we will introduce the coordination force to overcome the local minimum dilemma. During a progress of UAV for the target location, a group of moving obstacles are present in the direction towards the target location. Here, the proposed algorithm will find a new repulsive function by incorporating the distance impact. Once UAV is relatively close to target location, the repulsive force will degrade gradually trivial up to zero.
-![alt text]([[http://url/to/img.png]](https://drive.google.com/file/d/1K0diDjUfLbQHN0VkG8ewv4K6J5-H_zpY/view?usp=sharing))
+
+![Screenshot 2022-05-22 034556](https://user-images.githubusercontent.com/77221967/169670737-d283584b-9b81-4f38-af7b-ec770a0bfc58.png)
+
