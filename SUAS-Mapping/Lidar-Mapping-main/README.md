@@ -1,5 +1,7 @@
 LIDAR MAPPING FOR SUAS
 
+Data Set: https://drive.google.com/drive/folders/1S-_bC_d_EQiqbjLI7Wa9-yNQfGdzLVfH?usp=sharing
+
 Introduction to LIDAR:
 LIDAR is the abbreviation for Light Detection and Ranging. It uses laser beams to create a 3D representation of the given surrounding environment. A typical lidar sensor emits pulsed light waves into the surrounding environment. These pulses hit surrounding objects and return to the sensor. The sensor uses the time it took for each pulse to return to the sensor to calculate the distance it travelled. This process is repeated millions of times per second to create a precise, real-time 3D map of the environment. An onboard computer (Odriod) can utilize this map for safe navigation.
 
