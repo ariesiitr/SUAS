@@ -1,0 +1,994 @@
+{
+    "odmVersion": "2.7.1",
+    "memory": {
+        "total": 16191,
+        "available": 9317
+    },
+    "cpus": 8,
+    "images": 46,
+    "options": {
+        "auto_boundary": false,
+        "boundary": {},
+        "build_overviews": false,
+        "camera_lens": "auto",
+        "cameras": {},
+        "cog": false,
+        "copy_to": null,
+        "crop": 3,
+        "debug": false,
+        "dem_decimation": 1,
+        "dem_euclidean_map": false,
+        "dem_gapfill_steps": 3,
+        "dem_resolution": 5,
+        "depthmap_resolution": 640,
+        "dsm": false,
+        "dtm": false,
+        "end_with": "odm_postprocess",
+        "fast_orthophoto": false,
+        "feature_quality": "high",
+        "feature_type": "sift",
+        "force_gps": false,
+        "gcp": null,
+        "geo": null,
+        "gps_accuracy": 10,
+        "ignore_gsd": false,
+        "matcher_neighbors": 8,
+        "matcher_type": "flann",
+        "max_concurrency": 8,
+        "merge": "all",
+        "mesh_octree_depth": 11,
+        "mesh_size": 200000,
+        "min_num_features": 8000,
+        "name": "odm_boruszyn_kap-master",
+        "optimize_disk_space": false,
+        "orthophoto_compression": "DEFLATE",
+        "orthophoto_cutline": false,
+        "orthophoto_kmz": false,
+        "orthophoto_no_tiled": false,
+        "orthophoto_png": false,
+        "orthophoto_resolution": 5,
+        "pc_classify": false,
+        "pc_csv": false,
+        "pc_ept": false,
+        "pc_filter": 2.5,
+        "pc_geometric": false,
+        "pc_las": false,
+        "pc_quality": "medium",
+        "pc_rectify": false,
+        "pc_sample": 0,
+        "pc_tile": false,
+        "primary_band": "auto",
+        "project_path": "/odm_boruszyn_kap-master",
+        "radiometric_calibration": "none",
+        "rerun": null,
+        "rerun_all": false,
+        "rerun_from": null,
+        "resize_to": 2048,
+        "sfm_algorithm": "incremental",
+        "skip_3dmodel": false,
+        "skip_band_alignment": false,
+        "skip_orthophoto": false,
+        "skip_report": false,
+        "sm_cluster": null,
+        "smrf_scalar": 1.25,
+        "smrf_slope": 0.15,
+        "smrf_threshold": 0.5,
+        "smrf_window": 18.0,
+        "split": 999999,
+        "split_image_groups": null,
+        "split_overlap": 150,
+        "texturing_data_term": "gmi",
+        "texturing_keep_unseen_faces": false,
+        "texturing_outlier_removal_type": "gauss_clamping",
+        "texturing_skip_global_seam_leveling": false,
+        "texturing_skip_local_seam_leveling": false,
+        "texturing_tone_mapping": "none",
+        "tiles": false,
+        "time": false,
+        "use_3dmesh": false,
+        "use_exif": false,
+        "use_fixed_camera_params": false,
+        "use_hybrid_bundle_adjustment": false,
+        "verbose": false
+    },
+    "startTime": "2022-02-27T16:46:15.716880",
+    "stages": [
+        {
+            "name": "dataset",
+            "startTime": "2022-02-27T16:46:17.706153",
+            "messages": [
+                {
+                    "message": "Running dataset stage",
+                    "type": "info"
+                },
+                {
+                    "message": "Loading dataset from: C:\\odm_boruszyn_kap-master\\images",
+                    "type": "info"
+                },
+                {
+                    "message": "Loading 46 images",
+                    "type": "info"
+                },
+                {
+                    "message": "Wrote images database: C:\\odm_boruszyn_kap-master\\images.json",
+                    "type": "info"
+                },
+                {
+                    "message": "Found 46 usable images",
+                    "type": "info"
+                },
+                {
+                    "message": "Parsing SRS header: EPSG:2180",
+                    "type": "info"
+                },
+                {
+                    "message": "Parsing SRS header: WGS84 UTM 33N",
+                    "type": "info"
+                },
+                {
+                    "message": "Parsing SRS header: WGS84 UTM 33N",
+                    "type": "info"
+                },
+                {
+                    "message": "18 GCP points will be used for georeferencing",
+                    "type": "info"
+                },
+                {
+                    "message": "Generated coords file from GCP: WGS84 UTM 33N",
+                    "type": "info"
+                },
+                {
+                    "message": "Wrote C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferencing_model_geo.txt",
+                    "type": "info"
+                },
+                {
+                    "message": "Parsing SRS header: WGS84 UTM 33N",
+                    "type": "info"
+                },
+                {
+                    "message": "Finished dataset stage",
+                    "type": "info"
+                }
+            ]
+        },
+        {
+            "name": "split",
+            "startTime": "2022-02-27T16:46:18.244948",
+            "messages": [
+                {
+                    "message": "Running split stage",
+                    "type": "info"
+                },
+                {
+                    "message": "Normal dataset, will process all at once.",
+                    "type": "info"
+                },
+                {
+                    "message": "Finished split stage",
+                    "type": "info"
+                }
+            ]
+        },
+        {
+            "name": "merge",
+            "startTime": "2022-02-27T16:46:18.244948",
+            "messages": [
+                {
+                    "message": "Running merge stage",
+                    "type": "info"
+                },
+                {
+                    "message": "Normal dataset, nothing to merge.",
+                    "type": "info"
+                },
+                {
+                    "message": "Finished merge stage",
+                    "type": "info"
+                }
+            ]
+        },
+        {
+            "name": "opensfm",
+            "startTime": "2022-02-27T16:46:18.244948",
+            "messages": [
+                {
+                    "message": "Running opensfm stage",
+                    "type": "info"
+                },
+                {
+                    "message": "Maximum photo dimensions: 4608px",
+                    "type": "info"
+                },
+                {
+                    "message": "Photo dimensions for feature extraction: 2304px",
+                    "type": "info"
+                },
+                {
+                    "message": "No GPS information, using BOW matching by default (you can override this by setting --matcher-type explicitly)",
+                    "type": "info"
+                },
+                {
+                    "message": "Using BOW matching, will use HAHOG feature type, not SIFT",
+                    "type": "warning"
+                },
+                {
+                    "message": "Cannot use CUDA device: initialization error",
+                    "type": "warning"
+                },
+                {
+                    "message": [
+                        "use_exif_size: no",
+                        "flann_algorithm: KDTREE",
+                        "feature_process_size: 2304",
+                        "feature_min_frames: 8000",
+                        "processes: 8",
+                        "matching_gps_neighbors: 8",
+                        "matching_gps_distance: 0",
+                        "matching_graph_rounds: 50",
+                        "optimize_camera_parameters: yes",
+                        "reconstruction_algorithm: incremental",
+                        "undistorted_image_format: tif",
+                        "bundle_outlier_filtering_type: AUTO",
+                        "sift_peak_threshold: 0.066",
+                        "align_orientation_prior: vertical",
+                        "triangulation_type: ROBUST",
+                        "retriangulation_ratio: 2",
+                        "matcher_type: WORDS",
+                        "feature_type: HAHOG",
+                        "align_method: auto",
+                        "local_bundle_radius: 0",
+                        "bundle_use_gcp: yes",
+                        "bundle_use_gps: no"
+                    ],
+                    "type": "info"
+                },
+                {
+                    "message": "Wrote reference_lla.json",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" detect_features \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" match_features \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" create_tracks \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" reconstruct \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+                    "type": "info"
+                },
+                {
+                    "message": "Export reconstruction stats",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" compute_statistics --diagram_max_points 100000 \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" export_geocoords --reconstruction --proj \"+proj=utm +zone=33 +datum=WGS84 +units=m +no_defs +type=crs\" --offset-x 610386.0 --offset-y 5848499.0 \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+                    "type": "info"
+                },
+                {
+                    "message": "Negative GSD estimated, this might indicate a flipped Z-axis.",
+                    "type": "warning"
+                },
+                {
+                    "message": "Updating C:\\odm_boruszyn_kap-master\\opensfm\\config.yaml",
+                    "type": "info"
+                },
+                {
+                    "message": "undistorted_image_max_size: 576",
+                    "type": "info"
+                },
+                {
+                    "message": "Undistorting C:\\odm_boruszyn_kap-master\\opensfm ...",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" export_visualsfm --points \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+                    "type": "info"
+                },
+                {
+                    "message": "Finished opensfm stage",
+                    "type": "info"
+                }
+            ]
+        },
+        {
+            "name": "openmvs",
+            "startTime": "2022-02-27T16:52:23.299894",
+            "messages": [
+                {
+                    "message": "Running openmvs stage",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" export_openmvs \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+                    "type": "info"
+                },
+                {
+                    "message": "Running dense reconstruction. This might take a while.",
+                    "type": "info"
+                },
+                {
+                    "message": "Estimating depthmaps",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\OpenMVS\\DensifyPointCloud\" \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted\\openmvs\\scene.mvs\"  --resolution-level 0 --min-resolution 576 --max-resolution 576 --max-threads 8 --number-views-fuse 2 -w \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted\\openmvs\\depthmaps\" -v 0 --geometric-iters 0",
+                    "type": "info"
+                },
+                {
+                    "message": "OpenMVS failed with GPU, is your graphics card driver up to date? Falling back to CPU.",
+                    "type": "warning"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\OpenMVS\\DensifyPointCloud\" \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted\\openmvs\\scene.mvs\"  --resolution-level 0 --min-resolution 576 --max-resolution 576 --max-threads 8 --number-views-fuse 2 -w \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted\\openmvs\\depthmaps\" -v 0 --geometric-iters 0 --cuda-device -1",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\OpenMVS\\DensifyPointCloud\" --filter-point-cloud -1 -i \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted\\openmvs\\scene_dense.mvs\" -v 0 --cuda-device -1",
+                    "type": "info"
+                },
+                {
+                    "message": "Finished openmvs stage",
+                    "type": "info"
+                }
+            ]
+        },
+        {
+            "name": "odm_filterpoints",
+            "startTime": "2022-02-27T16:55:07.134719",
+            "messages": [
+                {
+                    "message": "Running odm_filterpoints stage",
+                    "type": "info"
+                },
+                {
+                    "message": "Filtering C:\\odm_boruszyn_kap-master\\opensfm\\undistorted\\openmvs\\scene_dense_dense_filtered.ply (statistical, meanK 16, standard deviation 2.5)",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\FPCFilter\" --input \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted\\openmvs\\scene_dense_dense_filtered.ply\" --output \"C:\\odm_boruszyn_kap-master\\odm_filterpoints\\point_cloud.ply\" --concurrency 8  --meank 16 --std 2.5",
+                    "type": "info"
+                },
+                {
+                    "message": "Finished odm_filterpoints stage",
+                    "type": "info"
+                }
+            ]
+        },
+        {
+            "name": "odm_meshing",
+            "startTime": "2022-02-27T16:55:11.513646",
+            "messages": [
+                {
+                    "message": "Running odm_meshing stage",
+                    "type": "info"
+                },
+                {
+                    "message": "Writing ODM Mesh file in: C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_mesh.ply",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\PoissonRecon\" --in \"C:\\odm_boruszyn_kap-master\\odm_filterpoints\\point_cloud.ply\" --out \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_mesh.dirty.ply\" --depth 11 --pointWeight 4.0 --samplesPerNode 1.0 --threads 7 --bType 2 --linearFit ",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\OpenMVS\\ReconstructMesh\" -i \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_mesh.dirty.ply\" -o \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_mesh.ply\" --remove-spikes 0 --remove-spurious 20 --smooth 0 --target-face-num 400000 -v 0",
+                    "type": "info"
+                },
+                {
+                    "message": "Writing ODM 2.5D Mesh file in: C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_25dmesh.ply",
+                    "type": "info"
+                },
+                {
+                    "message": "ODM 2.5D DSM resolution: 0.2",
+                    "type": "info"
+                },
+                {
+                    "message": "Created temporary directory: C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp",
+                    "type": "info"
+                },
+                {
+                    "message": "Creating DSM for 2.5D mesh",
+                    "type": "info"
+                },
+                {
+                    "message": "running pdal info \"C:\\odm_boruszyn_kap-master\\odm_filterpoints\\point_cloud.ply\" > \"C:\\Users\\SHIVAN~1\\AppData\\Local\\Temp\\tmpoe3xpf1_.json\"",
+                    "type": "info"
+                },
+                {
+                    "message": "Point cloud bounds are [minx: -0.4518143833, maxx: 0.8266437054] [miny: -0.7384989858, maxy: 0.3060603738]",
+                    "type": "info"
+                },
+                {
+                    "message": "Really low resolution DEM requested (7, 6) will set floor at 64 pixels. Resolution changed to 0.021875000000000002. The scale of this reconstruction might be off.",
+                    "type": "warning"
+                },
+                {
+                    "message": "DEM resolution is (53, 64), max tile size is 4096, will split DEM generation into 1 tiles",
+                    "type": "info"
+                },
+                {
+                    "message": "Generating C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\mesh_dsm_r0.03093592167691146_x0_y0.tif (max, radius: 0.03093592167691146, resolution: 0.021875000000000002)",
+                    "type": "info"
+                },
+                {
+                    "message": "running pdal pipeline -i \"C:\\Users\\SHIVAN~1\\AppData\\Local\\Temp\\tmppah8jk_0.json\"",
+                    "type": "info"
+                },
+                {
+                    "message": "running gdalbuildvrt -input_file_list \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles_list.txt\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.vrt\" ",
+                    "type": "info"
+                },
+                {
+                    "message": "running gdal_translate -co NUM_THREADS=8 -co BIGTIFF=IF_SAFER --config GDAL_CACHEMAX 29.8% \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.vrt\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.tmp.tif\"",
+                    "type": "info"
+                },
+                {
+                    "message": "running gdal_translate -co NUM_THREADS=8 -co BIGTIFF=IF_SAFER --config GDAL_CACHEMAX 29.8% -outsize 10% 0 \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.tmp.tif\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.small.tif\"",
+                    "type": "info"
+                },
+                {
+                    "message": "running gdalbuildvrt -resolution highest -r bilinear \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\merged.vrt\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.small_filled.tif\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.tmp.tif\"",
+                    "type": "info"
+                },
+                {
+                    "message": "running gdal_translate -co NUM_THREADS=8 -co TILED=YES -co BIGTIFF=IF_SAFER -co COMPRESS=DEFLATE --config GDAL_CACHEMAX 29.8% \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\merged.vrt\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.tif\"",
+                    "type": "info"
+                },
+                {
+                    "message": "Starting smoothing...",
+                    "type": "info"
+                },
+                {
+                    "message": "Smoothing iteration 1",
+                    "type": "info"
+                },
+                {
+                    "message": "Completed smoothing to create C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\mesh_dsm.tif in 0:00:00",
+                    "type": "info"
+                },
+                {
+                    "message": "Completed mesh_dsm.tif in 0:00:06.524240",
+                    "type": "info"
+                },
+                {
+                    "message": "Creating mesh from DSM: C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\mesh_dsm.tif",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\dem2mesh\" -inputFile \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\mesh_dsm.tif\" -outputFile \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_25dmesh.dirty.ply\" -maxTileLength 2000 -maxVertexCount 200000 -maxConcurrency 8   ",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\OpenMVS\\ReconstructMesh\" -i \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_25dmesh.dirty.ply\" -o \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_25dmesh.ply\" --remove-spikes 0 --remove-spurious 0 --smooth 0 --target-face-num 400000 -v 0",
+                    "type": "info"
+                },
+                {
+                    "message": "Finished odm_meshing stage",
+                    "type": "info"
+                }
+            ]
+        },
+        {
+            "name": "mvs_texturing",
+            "startTime": "2022-02-27T16:57:18.712799",
+            "messages": [
+                {
+                    "message": "Running mvs_texturing stage",
+                    "type": "info"
+                },
+                {
+                    "message": "Writing MVS Textured file in: C:\\odm_boruszyn_kap-master\\odm_texturing\\odm_textured_model_geo.obj",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\texrecon\" \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted/reconstruction.nvm\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_mesh.ply\" \"C:\\odm_boruszyn_kap-master\\odm_texturing\\odm_textured_model_geo\" -d gmi -o gauss_clamping -t none --no_intermediate_results      --max_texture_size=8192 ",
+                    "type": "info"
+                },
+                {
+                    "message": "Writing MVS Textured file in: C:\\odm_boruszyn_kap-master\\odm_texturing_25d\\odm_textured_model_geo.obj",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\texrecon\" \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted/reconstruction.nvm\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_25dmesh.ply\" \"C:\\odm_boruszyn_kap-master\\odm_texturing_25d\\odm_textured_model_geo\" -d gmi -o gauss_clamping -t none --no_intermediate_results    --nadir_mode  --max_texture_size=8192 ",
+                    "type": "info"
+                },
+                {
+                    "message": "Finished mvs_texturing stage",
+                    "type": "info"
+                }
+            ]
+        },
+        {
+            "name": "odm_georeferencing",
+            "startTime": "2022-02-27T16:57:58.790586",
+            "messages": [
+                {
+                    "message": "Running odm_georeferencing stage",
+                    "type": "info"
+                },
+                {
+                    "message": "running ogr2ogr -of GML \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\ground_control_points.gml\" \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\ground_control_points.gpkg\"",
+                    "type": "info"
+                },
+                {
+                    "message": "Georeferencing point cloud",
+                    "type": "info"
+                },
+                {
+                    "message": "Embedding GCP info in point cloud",
+                    "type": "info"
+                },
+                {
+                    "message": "running pdal translate -i \"C:\\odm_boruszyn_kap-master\\odm_filterpoints\\point_cloud.ply\" -o \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.laz\" ferry transformation --filters.ferry.dimensions=\"views => UserData\" --writers.las.compression=\"lazip\" --filters.transformation.matrix=\"1 0 0 610386.0 0 1 0 5848499.0 0 0 1 0 0 0 0 1\" --writers.las.offset_x=610386.0 --writers.las.offset_y=5848499.0 --writers.las.offset_z=0 --writers.las.a_srs=\"+proj=utm +zone=33 +datum=WGS84 +units=m +no_defs +type=crs\" --writers.las.vlrs=\"{\\\"filename\\\": \\\"C:/odm_boruszyn_kap-master/odm_georeferencing/ground_control_points.gml\\\", \\\"user_id\\\": \\\"ODM_GCP\\\", \\\"description\\\": \\\"Ground Control Points (GML)\\\"}\"",
+                    "type": "info"
+                },
+                {
+                    "message": "Calculating cropping area and generating bounds shapefile from point cloud",
+                    "type": "info"
+                },
+                {
+                    "message": "running pdal translate -i \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.laz\" -o \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.decimated.las\" decimation --filters.decimation.step=40 ",
+                    "type": "info"
+                },
+                {
+                    "message": "running pdal info --boundary --filters.hexbin.edge_size=1 --filters.hexbin.threshold=0 \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.decimated.las\" > \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.boundary.json\"",
+                    "type": "info"
+                },
+                {
+                    "message": "Very small crop area detected, we will not smooth it.",
+                    "type": "warning"
+                },
+                {
+                    "message": "running pdal info --summary \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.laz\" > \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.summary.json\"",
+                    "type": "info"
+                },
+                {
+                    "message": "running ogr2ogr -overwrite -f GPKG -a_srs \"+proj=utm +zone=33 +datum=WGS84 +units=m +no_defs\" \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.bounds.gpkg\" \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.bounds.geojson\"",
+                    "type": "info"
+                },
+                {
+                    "message": "Finished odm_georeferencing stage",
+                    "type": "info"
+                }
+            ]
+        },
+        {
+            "name": "odm_dem",
+            "startTime": "2022-02-27T16:58:03.284729",
+            "messages": [
+                {
+                    "message": "Running odm_dem stage",
+                    "type": "info"
+                },
+                {
+                    "message": "Classify: False",
+                    "type": "info"
+                },
+                {
+                    "message": "Create DSM: False",
+                    "type": "info"
+                },
+                {
+                    "message": "Create DTM: False",
+                    "type": "info"
+                },
+                {
+                    "message": "DEM input file C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.laz found: True",
+                    "type": "info"
+                },
+                {
+                    "message": "DEM will not be generated",
+                    "type": "warning"
+                },
+                {
+                    "message": "Finished odm_dem stage",
+                    "type": "info"
+                }
+            ]
+        },
+        {
+            "name": "odm_orthophoto",
+            "startTime": "2022-02-27T16:58:03.284729",
+            "messages": [
+                {
+                    "message": "Running odm_orthophoto stage",
+                    "type": "info"
+                },
+                {
+                    "message": "running \"C:\\ODM\\SuperBuild\\install\\bin\\odm_orthophoto\" -inputFiles \"C:\\odm_boruszyn_kap-master\\odm_texturing_25d\\odm_textured_model_geo.obj\" -logFile \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto_log.txt\" -outputFile \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto_render.tif\" -resolution 20.0  -outputCornerFile \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto_corners.txt\" ",
+                    "type": "info"
+                },
+                {
+                    "message": "Creating GeoTIFF",
+                    "type": "info"
+                },
+                {
+                    "message": "running gdal_translate -a_ullr 610385.5481860042 5848499.311500996 610386.8169360161 5848498.2833759785 -co TILED=YES -co COMPRESS=DEFLATE -co PREDICTOR=2 -co BIGTIFF=IF_SAFER -co BLOCKXSIZE=512 -co BLOCKYSIZE=512 -co NUM_THREADS=8 -a_srs \"+proj=utm +zone=33 +datum=WGS84 +units=m +no_defs +type=crs\" --config GDAL_CACHEMAX 29.45% --config GDAL_TIFF_INTERNAL_MASK YES \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto_render.tif\" \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto.tif\" > \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\gdal_translate_log.txt\"",
+                    "type": "info"
+                },
+                {
+                    "message": "Cropping C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto.tif",
+                    "type": "info"
+                },
+                {
+                    "message": "running gdalwarp -cutline \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.bounds.gpkg\" -crop_to_cutline -co TILED=YES -co COMPRESS=DEFLATE -co PREDICTOR=2 -co BIGTIFF=IF_SAFER -co BLOCKXSIZE=512 -co BLOCKYSIZE=512 -co NUM_THREADS=8 -dstalpha \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto.original.tif\" \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto.tif\" --config GDAL_CACHEMAX 29.4%",
+                    "type": "info"
+                },
+                {
+                    "message": "Finished odm_orthophoto stage",
+                    "type": "info"
+                }
+            ]
+        },
+        {
+            "name": "odm_report",
+            "startTime": "2022-02-27T16:58:03.647999",
+            "messages": [
+                {
+                    "message": "Running odm_report stage",
+                    "type": "info"
+                },
+                {
+                    "message": "Exporting shots.geojson",
+                    "type": "info"
+                },
+                {
+                    "message": "Wrote C:\\odm_boruszyn_kap-master\\odm_report\\shots.geojson",
+                    "type": "info"
+                },
+                {
+                    "message": "running pdal info --dimensions \"X,Y,Z\" \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.laz\" > \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.info.json\"",
+                    "type": "info"
+                },
+                {
+                    "message": "running pdal translate -i \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.laz\" -o \"C:\\odm_boruszyn_kap-master\\opensfm\\stats\\overlap.tif\" --writer gdal --writers.gdal.resolution=0.0009142857142225174 --writers.gdal.data_type=uint8_t --writers.gdal.dimension=UserData --writers.gdal.output_type=max --writers.gdal.radius=0.001292995256937456 ",
+                    "type": "info"
+                },
+                {
+                    "message": "Cropping C:\\odm_boruszyn_kap-master\\opensfm\\stats\\overlap.tif",
+                    "type": "info"
+                },
+                {
+                    "message": "running gdalwarp -cutline \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.bounds.gpkg\" -crop_to_cutline -co TILED=YES -co COMPRESS=DEFLATE -co PREDICTOR=2 -co BIGTIFF=IF_SAFER -co BLOCKXSIZE=512 -co BLOCKYSIZE=512 -co NUM_THREADS=8  \"C:\\odm_boruszyn_kap-master\\opensfm\\stats\\overlap.original.tif\" \"C:\\odm_boruszyn_kap-master\\opensfm\\stats\\overlap.tif\" --config GDAL_CACHEMAX 29.45%",
+                    "type": "info"
+                },
+                {
+                    "message": "running gdaldem color-relief \"C:\\odm_boruszyn_kap-master\\opensfm\\stats\\overlap.tif\" \"C:\\ODM\\opendm\\report\\overlap_color_map.txt\" \"C:\\odm_boruszyn_kap-master\\opensfm\\stats\\overlap.png\" -of PNG -alpha",
+                    "type": "info"
+                },
+                {
+                    "message": "running gdal_translate -of png \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto.tif\" \"C:\\odm_boruszyn_kap-master\\opensfm\\stats\\ortho.png\" -outsize 1400 0  --config GDAL_CACHEMAX 29.5% ",
+                    "type": "info"
+                },
+                {
+                    "message": "Exporting report to C:\\odm_boruszyn_kap-master\\odm_report\\report.pdf",
+                    "type": "info"
+                },
+                {
+                    "message": "Finished odm_report stage",
+                    "type": "info"
+                }
+            ]
+        },
+        {
+            "name": "odm_postprocess",
+            "startTime": "2022-02-27T16:58:22.426006",
+            "messages": [
+                {
+                    "message": "Running odm_postprocess stage",
+                    "type": "info"
+                },
+                {
+                    "message": "Post Processing",
+                    "type": "info"
+                },
+                {
+                    "message": "Wrote xml:GROUND_CONTROL_POINTS metadata to C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto.tif",
+                    "type": "info"
+                },
+                {
+                    "message": "Finished odm_postprocess stage",
+                    "type": "info"
+                },
+                {
+                    "message": "No more stages to run",
+                    "type": "info"
+                }
+            ],
+            "endTime": "2022-02-27T16:58:22.457253",
+            "totalTime": 0.03
+        }
+    ],
+    "processes": [
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" detect_features \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+            "exitCode": 0,
+            "output": [
+                "2022-02-27 16:47:07,037 DEBUG: No segmentation for img_4953.jpg, no features masked.",
+                "2022-02-27 16:47:07,089 DEBUG: Found 9694 points in 5.024037599563599s",
+                "2022-02-27 16:47:07,089 DEBUG: No segmentation for img_4929.jpg, no features masked.",
+                "2022-02-27 16:47:07,591 DEBUG: Found 9410 points in 5.029430627822876s",
+                "2022-02-27 16:47:07,593 DEBUG: No segmentation for img_4890.jpg, no features masked.",
+                "2022-02-27 16:47:07,884 INFO: Extracting ROOT_HAHOG features for image img_4955.jpg",
+                "2022-02-27 16:47:09,892 DEBUG: Found 10019 points in 4.881661891937256s",
+                "2022-02-27 16:47:09,902 DEBUG: No segmentation for img_4930.jpg, no features masked.",
+                "2022-02-27 16:47:11,651 DEBUG: Found 9856 points in 3.7253026962280273s",
+                "2022-02-27 16:47:11,660 DEBUG: No segmentation for img_4955.jpg, no features masked."
+            ]
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" match_features \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+            "exitCode": 0,
+            "output": [
+                "2022-02-27 16:49:42,709 DEBUG: Matching img_4883.jpg and img_4915.jpg.  Matcher: WORDS (symmetric) T-desc: 0.358 T-robust: 0.344 T-total: 0.702 Matches: 753 Robust: 732 Success: True",
+                "2022-02-27 16:49:42,709 DEBUG: Matching img_4928.jpg and img_4969.jpg.  Matcher: WORDS (symmetric) T-desc: 0.566 T-robust: 0.701 T-total: 1.339 Matches: 1357 Robust: 1319 Success: True",
+                "2022-02-27 16:49:42,778 DEBUG: Matching img_4955.jpg and img_4937.jpg.  Matcher: WORDS (symmetric) T-desc: 0.569 T-robust: 0.415 T-total: 1.128 Matches: 184 Robust: 156 Success: True",
+                "2022-02-27 16:49:42,847 DEBUG: Matching img_4965.jpg and img_4854.jpg.  Matcher: WORDS (symmetric) T-desc: 0.630 T-robust: 0.073 T-total: 0.845 Matches: 59 Robust: 37 Success: True",
+                "2022-02-27 16:49:42,925 DEBUG: Matching img_4890.jpg and img_4873.jpg.  Matcher: WORDS (symmetric) T-desc: 0.202 T-robust: 0.288 T-total: 0.490 Matches: 341 Robust: 315 Success: True",
+                "2022-02-27 16:49:42,925 DEBUG: Matching img_4883.jpg and img_4970.jpg.  Matcher: WORDS (symmetric) T-desc: 0.568 T-robust: 0.137 T-total: 0.992 Matches: 178 Robust: 139 Success: True",
+                "2022-02-27 16:49:42,994 DEBUG: Matching img_4967.jpg and img_4976.jpg.  Matcher: WORDS (symmetric) T-desc: 0.423 T-robust: 0.072 T-total: 0.495 Matches: 520 Robust: 503 Success: True",
+                "2022-02-27 16:49:42,994 DEBUG: Matching img_4918.jpg and img_4934.jpg.  Matcher: WORDS (symmetric) T-desc: 0.283 T-robust: 0.076 T-total: 0.360 Matches: 792 Robust: 706 Success: True",
+                "2022-02-27 16:49:42,994 DEBUG: Matching img_4940.jpg and img_4918.jpg.  Matcher: WORDS (symmetric) T-desc: 0.287 T-robust: 0.004 T-total: 0.291 Matches: 341 Robust: 319 Success: True",
+                "2022-02-27 16:49:42,994 INFO: Matched 1035 pairs (brown-brown: 1035) in 148.50065139999998 seconds (0.14347889091787439 seconds/pair)."
+            ]
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" create_tracks \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+            "exitCode": 0,
+            "output": [
+                "2022-02-27 16:49:45,537 INFO: reading features",
+                "2022-02-27 16:49:46,238 DEBUG: Merging features onto tracks",
+                "2022-02-27 16:49:48,740 DEBUG: Good tracks: 46259"
+            ]
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" reconstruct \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+            "exitCode": 0,
+            "output": [
+                "2022-02-27 16:50:45,573 INFO: img_4946.jpg resection inliers: 1290 / 1386",
+                "2022-02-27 16:50:45,583 INFO: Adding img_4946.jpg to the reconstruction",
+                "2022-02-27 16:50:45,703 INFO: -------------------------------------------------------",
+                "2022-02-27 16:50:45,726 INFO: img_4961.jpg resection inliers: 1177 / 1270",
+                "2022-02-27 16:50:45,736 INFO: Adding img_4961.jpg to the reconstruction",
+                "2022-02-27 16:50:45,827 INFO: -------------------------------------------------------",
+                "2022-02-27 16:51:23,979 DEBUG: Ceres Solver Report: Iterations: 101, Initial cost: 3.644702e+08, Final cost: 1.016648e+05, Termination: NO_CONVERGENCE",
+                "2022-02-27 16:51:24,987 INFO: Removed outliers: 6465",
+                "2022-02-27 16:51:25,477 INFO: Reconstruction 0: 46 images, 43875 points",
+                "2022-02-27 16:51:25,477 INFO: 1 partial reconstructions in total."
+            ]
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" compute_statistics --diagram_max_points 100000 \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+            "exitCode": 0,
+            "output": [
+                "2022-02-27 16:51:37,785 DEBUG: locator: <matplotlib.colorbar._ColorbarAutoLocator object at 0x000002C9ED3C26A0>",
+                "2022-02-27 16:51:37,785 DEBUG: Using auto colorbar locator <matplotlib.colorbar._ColorbarAutoLocator object at 0x000002C9ED3C26A0> on colorbar",
+                "2022-02-27 16:51:37,785 DEBUG: Setting pcolormesh",
+                "2022-02-27 16:51:39,166 DEBUG: locator: <matplotlib.colorbar._ColorbarAutoLocator object at 0x000002C9D2CB5430>",
+                "2022-02-27 16:51:39,166 DEBUG: Using auto colorbar locator <matplotlib.colorbar._ColorbarAutoLocator object at 0x000002C9D2CB5430> on colorbar",
+                "2022-02-27 16:51:39,166 DEBUG: Setting pcolormesh"
+            ]
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" export_geocoords --reconstruction --proj \"+proj=utm +zone=33 +datum=WGS84 +units=m +no_defs +type=crs\" --offset-x 610386.0 --offset-y 5848499.0 \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+            "exitCode": 0
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" export_visualsfm --points \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+            "exitCode": 0
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\opensfm\\bin\\opensfm\" export_openmvs \"C:\\odm_boruszyn_kap-master\\opensfm\"",
+            "exitCode": 0
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\OpenMVS\\DensifyPointCloud\" \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted\\openmvs\\scene.mvs\"  --resolution-level 0 --min-resolution 576 --max-resolution 576 --max-threads 8 --number-views-fuse 2 -w \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted\\openmvs\\depthmaps\" -v 0 --geometric-iters 0",
+            "exitCode": 1
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\OpenMVS\\DensifyPointCloud\" \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted\\openmvs\\scene.mvs\"  --resolution-level 0 --min-resolution 576 --max-resolution 576 --max-threads 8 --number-views-fuse 2 -w \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted\\openmvs\\depthmaps\" -v 0 --geometric-iters 0 --cuda-device -1",
+            "exitCode": 0
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\OpenMVS\\DensifyPointCloud\" --filter-point-cloud -1 -i \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted\\openmvs\\scene_dense.mvs\" -v 0 --cuda-device -1",
+            "exitCode": 0
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\FPCFilter\" --input \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted\\openmvs\\scene_dense_dense_filtered.ply\" --output \"C:\\odm_boruszyn_kap-master\\odm_filterpoints\\point_cloud.ply\" --concurrency 8  --meank 16 --std 2.5",
+            "exitCode": 0,
+            "output": [
+                "-> Statistical filtering",
+                "",
+                "?> Done in 3.417s",
+                "",
+                "-> Writing output",
+                "",
+                "?> Done in 0.8918s",
+                "",
+                "?> Pipeline done in 4.309s",
+                ""
+            ]
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\PoissonRecon\" --in \"C:\\odm_boruszyn_kap-master\\odm_filterpoints\\point_cloud.ply\" --out \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_mesh.dirty.ply\" --depth 11 --pointWeight 4.0 --samplesPerNode 1.0 --threads 7 --bType 2 --linearFit ",
+            "exitCode": 0
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\OpenMVS\\ReconstructMesh\" -i \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_mesh.dirty.ply\" -o \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_mesh.ply\" --remove-spikes 0 --remove-spurious 20 --smooth 0 --target-face-num 400000 -v 0",
+            "exitCode": 0
+        },
+        {
+            "command": "pdal info \"C:\\odm_boruszyn_kap-master\\odm_filterpoints\\point_cloud.ply\" > \"C:\\Users\\SHIVAN~1\\AppData\\Local\\Temp\\tmpoe3xpf1_.json\"",
+            "exitCode": 0
+        },
+        {
+            "command": "pdal pipeline -i \"C:\\Users\\SHIVAN~1\\AppData\\Local\\Temp\\tmppah8jk_0.json\"",
+            "exitCode": 0
+        },
+        {
+            "command": "gdalbuildvrt -input_file_list \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles_list.txt\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.vrt\" ",
+            "exitCode": 0,
+            "output": [
+                "0...10...20...30...40...50...60...70...80...90...100 - done."
+            ]
+        },
+        {
+            "command": "gdal_translate -co NUM_THREADS=8 -co BIGTIFF=IF_SAFER --config GDAL_CACHEMAX 29.8% \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.vrt\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.tmp.tif\"",
+            "exitCode": 0,
+            "output": [
+                "Input file size is 59, 48",
+                "0...10...20...30...40...50...60...70...80...90...100 - done."
+            ]
+        },
+        {
+            "command": "gdal_translate -co NUM_THREADS=8 -co BIGTIFF=IF_SAFER --config GDAL_CACHEMAX 29.8% -outsize 10% 0 \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.tmp.tif\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.small.tif\"",
+            "exitCode": 0,
+            "output": [
+                "Input file size is 59, 48",
+                "0...10...20...30...40...50...60...70...80...90...100 - done."
+            ]
+        },
+        {
+            "command": "gdalbuildvrt -resolution highest -r bilinear \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\merged.vrt\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.small_filled.tif\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.tmp.tif\"",
+            "exitCode": 0,
+            "output": [
+                "0...10...20...30...40...50...60...70...80...90...100 - done."
+            ]
+        },
+        {
+            "command": "gdal_translate -co NUM_THREADS=8 -co TILED=YES -co BIGTIFF=IF_SAFER -co COMPRESS=DEFLATE --config GDAL_CACHEMAX 29.8% \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\merged.vrt\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\tiles.tif\"",
+            "exitCode": 0,
+            "output": [
+                "Input file size is 59, 48",
+                "0...10...20...30...40...50...60...70...80...90...100 - done."
+            ]
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\dem2mesh\" -inputFile \"C:\\odm_boruszyn_kap-master\\odm_meshing\\tmp\\mesh_dsm.tif\" -outputFile \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_25dmesh.dirty.ply\" -maxTileLength 2000 -maxVertexCount 200000 -maxConcurrency 8   ",
+            "exitCode": 0
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\OpenMVS\\ReconstructMesh\" -i \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_25dmesh.dirty.ply\" -o \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_25dmesh.ply\" --remove-spikes 0 --remove-spurious 0 --smooth 0 --target-face-num 400000 -v 0",
+            "exitCode": 0
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\texrecon\" \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted/reconstruction.nvm\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_mesh.ply\" \"C:\\odm_boruszyn_kap-master\\odm_texturing\\odm_textured_model_geo\" -d gmi -o gauss_clamping -t none --no_intermediate_results      --max_texture_size=8192 ",
+            "exitCode": 0,
+            "output": [
+                "Working on atlas 14 95%...",
+                "Working on atlas 14 96%...",
+                "Working on atlas 14 97%...",
+                "Working on atlas 14 98%...",
+                "Working on atlas 14 99%...",
+                "Working on atlas 14 100%... done.",
+                "Finalizing texture atlases... done. (Took: 0s)",
+                "Building objmodel:",
+                "Saving model... done.",
+                "Whole texturing procedure took: 38.098s"
+            ]
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\texrecon\" \"C:\\odm_boruszyn_kap-master\\opensfm\\undistorted/reconstruction.nvm\" \"C:\\odm_boruszyn_kap-master\\odm_meshing\\odm_25dmesh.ply\" \"C:\\odm_boruszyn_kap-master\\odm_texturing_25d\\odm_textured_model_geo\" -d gmi -o gauss_clamping -t none --no_intermediate_results    --nadir_mode  --max_texture_size=8192 ",
+            "exitCode": 0,
+            "output": [
+                "Working on atlas 1 95%...",
+                "Working on atlas 1 96%...",
+                "Working on atlas 1 97%...",
+                "Working on atlas 1 98%...",
+                "Working on atlas 1 99%...",
+                "Working on atlas 1 100%... done.",
+                "Finalizing texture atlases... done. (Took: 0s)",
+                "Building objmodel:",
+                "Saving model... done.",
+                "Whole texturing procedure took: 1.825s"
+            ]
+        },
+        {
+            "command": "ogr2ogr -of GML \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\ground_control_points.gml\" \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\ground_control_points.gpkg\"",
+            "exitCode": 0
+        },
+        {
+            "command": "pdal translate -i \"C:\\odm_boruszyn_kap-master\\odm_filterpoints\\point_cloud.ply\" -o \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.laz\" ferry transformation --filters.ferry.dimensions=\"views => UserData\" --writers.las.compression=\"lazip\" --filters.transformation.matrix=\"1 0 0 610386.0 0 1 0 5848499.0 0 0 1 0 0 0 0 1\" --writers.las.offset_x=610386.0 --writers.las.offset_y=5848499.0 --writers.las.offset_z=0 --writers.las.a_srs=\"+proj=utm +zone=33 +datum=WGS84 +units=m +no_defs +type=crs\" --writers.las.vlrs=\"{\\\"filename\\\": \\\"C:/odm_boruszyn_kap-master/odm_georeferencing/ground_control_points.gml\\\", \\\"user_id\\\": \\\"ODM_GCP\\\", \\\"description\\\": \\\"Ground Control Points (GML)\\\"}\"",
+            "exitCode": 0
+        },
+        {
+            "command": "pdal translate -i \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.laz\" -o \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.decimated.las\" decimation --filters.decimation.step=40 ",
+            "exitCode": 0
+        },
+        {
+            "command": "pdal info --boundary --filters.hexbin.edge_size=1 --filters.hexbin.threshold=0 \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.decimated.las\" > \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.boundary.json\"",
+            "exitCode": 0
+        },
+        {
+            "command": "pdal info --summary \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.laz\" > \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.summary.json\"",
+            "exitCode": 0
+        },
+        {
+            "command": "ogr2ogr -overwrite -f GPKG -a_srs \"+proj=utm +zone=33 +datum=WGS84 +units=m +no_defs\" \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.bounds.gpkg\" \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.bounds.geojson\"",
+            "exitCode": 0
+        },
+        {
+            "command": "\"C:\\ODM\\SuperBuild\\install\\bin\\odm_orthophoto\" -inputFiles \"C:\\odm_boruszyn_kap-master\\odm_texturing_25d\\odm_textured_model_geo.obj\" -logFile \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto_log.txt\" -outputFile \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto_render.tif\" -resolution 20.0  -outputCornerFile \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto_corners.txt\" ",
+            "exitCode": 0
+        },
+        {
+            "command": "gdal_translate -a_ullr 610385.5481860042 5848499.311500996 610386.8169360161 5848498.2833759785 -co TILED=YES -co COMPRESS=DEFLATE -co PREDICTOR=2 -co BIGTIFF=IF_SAFER -co BLOCKXSIZE=512 -co BLOCKYSIZE=512 -co NUM_THREADS=8 -a_srs \"+proj=utm +zone=33 +datum=WGS84 +units=m +no_defs +type=crs\" --config GDAL_CACHEMAX 29.45% --config GDAL_TIFF_INTERNAL_MASK YES \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto_render.tif\" \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto.tif\" > \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\gdal_translate_log.txt\"",
+            "exitCode": 0
+        },
+        {
+            "command": "gdalwarp -cutline \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.bounds.gpkg\" -crop_to_cutline -co TILED=YES -co COMPRESS=DEFLATE -co PREDICTOR=2 -co BIGTIFF=IF_SAFER -co BLOCKXSIZE=512 -co BLOCKYSIZE=512 -co NUM_THREADS=8 -dstalpha \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto.original.tif\" \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto.tif\" --config GDAL_CACHEMAX 29.4%",
+            "exitCode": 0,
+            "output": [
+                "Using band 4 of source image as alpha.",
+                "Creating output file that is 71P x 69L.",
+                "Processing C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto.original.tif [1/1] : 0...10...20...30...40...50...60...70...80...90...100 - done."
+            ]
+        },
+        {
+            "command": "pdal info --dimensions \"X,Y,Z\" \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.laz\" > \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.info.json\"",
+            "exitCode": 0
+        },
+        {
+            "command": "pdal translate -i \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.laz\" -o \"C:\\odm_boruszyn_kap-master\\opensfm\\stats\\overlap.tif\" --writer gdal --writers.gdal.resolution=0.0009142857142225174 --writers.gdal.data_type=uint8_t --writers.gdal.dimension=UserData --writers.gdal.output_type=max --writers.gdal.radius=0.001292995256937456 ",
+            "exitCode": 0
+        },
+        {
+            "command": "gdalwarp -cutline \"C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.bounds.gpkg\" -crop_to_cutline -co TILED=YES -co COMPRESS=DEFLATE -co PREDICTOR=2 -co BIGTIFF=IF_SAFER -co BLOCKXSIZE=512 -co BLOCKYSIZE=512 -co NUM_THREADS=8  \"C:\\odm_boruszyn_kap-master\\opensfm\\stats\\overlap.original.tif\" \"C:\\odm_boruszyn_kap-master\\opensfm\\stats\\overlap.tif\" --config GDAL_CACHEMAX 29.45%",
+            "exitCode": 0,
+            "output": [
+                "Creating output file that is 3827P x 3788L.",
+                "Processing C:\\odm_boruszyn_kap-master\\opensfm\\stats\\overlap.original.tif [1/1] : 0Using internal nodata values (e.g. 255) for image C:\\odm_boruszyn_kap-master\\opensfm\\stats\\overlap.original.tif.",
+                "Copying nodata values from source C:\\odm_boruszyn_kap-master\\opensfm\\stats\\overlap.original.tif to destination C:\\odm_boruszyn_kap-master\\opensfm\\stats\\overlap.tif.",
+                "...10...20...30...40...50...60...70...80...90...100 - done."
+            ]
+        },
+        {
+            "command": "gdaldem color-relief \"C:\\odm_boruszyn_kap-master\\opensfm\\stats\\overlap.tif\" \"C:\\ODM\\opendm\\report\\overlap_color_map.txt\" \"C:\\odm_boruszyn_kap-master\\opensfm\\stats\\overlap.png\" -of PNG -alpha",
+            "exitCode": 0,
+            "output": [
+                "0...10...20...30...40...50...60...70...80...90...100 - done."
+            ]
+        },
+        {
+            "command": "gdal_translate -of png \"C:\\odm_boruszyn_kap-master\\odm_orthophoto\\odm_orthophoto.tif\" \"C:\\odm_boruszyn_kap-master\\opensfm\\stats\\ortho.png\" -outsize 1400 0  --config GDAL_CACHEMAX 29.5% ",
+            "exitCode": 0,
+            "output": [
+                "Input file size is 71, 69",
+                "0...10...20...30...40...50...60...70...80...90...100 - done."
+            ]
+        }
+    ],
+    "success": true,
+    "endTime": "2022-02-27T16:58:22.457253",
+    "totalTime": 726.74
+}

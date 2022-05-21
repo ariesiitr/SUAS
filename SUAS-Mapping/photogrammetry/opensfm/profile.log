@@ -1,0 +1,8 @@
+detect_features: 48.769874
+match_features: 149.4657695
+create_tracks: 7.016396100000001
+reconstruct: 92.7841571
+compute_statistics: 17.866218
+export_geocoords: 2.1907582999999997
+export_visualsfm: 7.8756813
+export_openmvs: 1.7363248000000002

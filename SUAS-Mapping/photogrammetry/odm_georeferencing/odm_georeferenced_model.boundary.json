@@ -1,0 +1,21 @@
+{
+  "boundary":
+  {
+    "area": 6.495190535,
+    "avg_pt_per_sq_unit": 0.0005519731341,
+    "avg_pt_spacing": 0.01238248241,
+    "boundary": "POLYGON ((610386.98 5848497.1,610387.48 5848499.7,610385.98 5848500.5,610383.98 5848498.8,610386.98 5848497.1))",
+    "boundary_json": { "type": "Polygon", "coordinates": [ [ [ 610386.979999999981374, 5848497.067949189804494 ], [ 610387.479999999981374, 5848499.666025400161743 ], [ 610385.979999999981374, 5848500.532050809822977 ], [ 610383.979999999981374, 5848498.799999999813735 ], [ 610386.979999999981374, 5848497.067949189804494 ] ] ] },
+    "density": 6522.056554,
+    "edge_length": 1,
+    "estimated_edge": 1.732050808,
+    "hex_offsets": "MULTIPOINT (0 0, -0.5 0.866025, 0 1.73205, 1 1.73205, 1.5 0.866025, 1 0)",
+    "sample_size": 5000,
+    "threshold": 0
+  },
+  "file_size": 1440737,
+  "filename": "C:\\odm_boruszyn_kap-master\\odm_georeferencing\\odm_georeferenced_model.decimated.las",
+  "now": "2022-02-27T16:58:03+0530",
+  "pdal_version": "2.3.0 (git-version: 2c5ec5)",
+  "reader": "readers.las"
+}

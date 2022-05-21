@@ -1,0 +1,12 @@
+{
+    "make": "Canon",
+    "model": "Canon PowerShot A3300 IS",
+    "width": 4608,
+    "height": 3456,
+    "projection_type": "brown",
+    "focal_ratio": 0.7600401301188703,
+    "orientation": 8,
+    "capture_time": 1345380588.0,
+    "gps": {},
+    "camera": "v2 canon canon powershot a3300 is 4608 3456 brown 0.7600"
+}

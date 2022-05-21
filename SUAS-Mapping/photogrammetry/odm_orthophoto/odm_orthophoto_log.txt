@@ -1,0 +1,45 @@
+C:\ODM\SuperBuild\install\bin\odm_orthophoto_log.txt
+
+Arguments given
+-inputFiles
+C:\odm_boruszyn_kap-master\odm_texturing_25d\odm_textured_model_geo.obj
+-logFile
+C:\odm_boruszyn_kap-master\odm_orthophoto\odm_orthophoto_log.txt
+-outputFile
+C:\odm_boruszyn_kap-master\odm_orthophoto\odm_orthophoto_render.tif
+-resolution
+20.0
+-outputCornerFile
+C:\odm_boruszyn_kap-master\odm_orthophoto\odm_orthophoto_corners.txt
+
+Log file path was set to: C:\odm_boruszyn_kap-master\odm_orthophoto\odm_orthophoto_log.txt
+Writing output to: C:\odm_boruszyn_kap-master\odm_orthophoto\odm_orthophoto_render.tif
+Resolution count was set to: 20pixels/meter
+Writing corners to: C:\odm_boruszyn_kap-master\odm_orthophoto\odm_orthophoto_corners.txt
+
+Reading mesh file... C:\odm_boruszyn_kap-master\odm_texturing_25d\odm_textured_model_geo.obj
+Mesh file read.
+
+Set boundary to contain entire model.
+Boundary points:
+Point 1: -0.451814 -0.716624
+Point 2: -0.451814 0.311501
+Point 3: 0.816936 0.311501
+Point 4: 0.816936 -0.716624
+
+Model bounds x : -0.451814 -> 0.816936
+Model bounds y : -0.716624 -> 0.311501
+Model area : 1.30443m2
+Model resolution, width x height : 26x21
+Translating and scaling mesh...
+.. mesh translated and scaled.
+
+Rendering the ortho photo...
+Texture channels: 3
+Texture depth: 8bit
+Material 0 rendered.
+... model rendered
+
+Writing ortho photo to C:\odm_boruszyn_kap-master\odm_orthophoto\odm_orthophoto_render.tif
+Writing corner coordinates to C:\odm_boruszyn_kap-master\odm_orthophoto\odm_orthophoto_corners.txt
+Orthophoto generation done.
