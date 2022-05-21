@@ -1,10 +1,10 @@
 Harsh Maurya (20117056) 
 
-# UGV(Unmanned GROUND VEHICLE) :
+# UGV (Unmanned GROUND VEHICLE) :
 The UGV is a custom-designed vehicle holding a bottle up to the delivery location. It is the frame is made from 
 carbon fibre to have minimum weight with maximum 
 strength. It utilizes DC motors to transport the 8 
-oz(236gm). water bottle. The water bottle is held firmly in 
+oz (236gm) water bottle. The water bottle is held firmly in 
 place by the custom 3d printed supports and by some 
 rubber bands as an extra precaution. It would be a four wheeled ugv with a wheel size of 7x2 cm each. In order 
 to reduce the weight, the team decided to use a 600mAh 
