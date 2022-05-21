@@ -6,16 +6,10 @@ carbon fibre to have minimum weight with maximum
 strength. It utilizes DC motors to transport the 8 
 oz(236gm). water bottle. The water bottle is held firmly in 
 place by the custom 3d printed supports and by some 
-rubber bands as an extra precaution. It would be a threewheeled ugv with a wheel size of 7x2 cm each. In order 
+rubber bands as an extra precaution. It would be a four wheeled ugv with a wheel size of 7x2 cm each. In order 
 to reduce the weight, the team decided to use a 600mAh 
 LIPO battery, giving us the minimum power required to 
-perform the mission. An 8-bit Arduino type 
-microcontroller will be controlling the motors, GPS/IMU 
-module as well as the telemetry module. Once on the 
-ground, the GPS will report the position of the rover and 
-the telemetry will allow communication at a distance. 
-Servo-motors allows the rover to separate itself from the 
-rope hooked to the drone once it is on the ground. The 
+perform the mission. The 
 UGV drive up to its destination is completely 
 autonomous. The aforementioned UGV components 
 were once again chosen to reduce weight and overall 
