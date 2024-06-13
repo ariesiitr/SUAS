@@ -3,6 +3,6 @@ The task is to determine the shape, alphanumeric character, shape color and char
 
 A simple python script that makes use of computer vision techniques only, is used for judging the shape and character color. This was done on this image. This image was then masked, based on the character color to result in a binary image, with the outline of the character being white, and the rest of the background being black.Noise removal and image smoothening was also ensured.
 
-This resulting image was finally fed to another model trained using YOLOv5s to detect alphanumeric characters.
+This resulting image was finally fed to another model trained using YOLOv5s to detect alphanumeric characters. 
 
 The weights for shape and character detection can be found in the weights folder.
